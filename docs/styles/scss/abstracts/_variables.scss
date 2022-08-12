@@ -1,1 +1,12 @@
-// Fonts
+/* Custom Properties */
+:root {
+  /* Font Families */
+  --ff-primary: "Sen", sans-serif;
+  --ff-secondary: "Plus Jakarta Sans", sans-serif;
+  --clr-primary-100: hsl(277, 100%, 17%); // Purple - 100%
+  --clr-primary-75: hsl(254, 43%, 45%); // Purple - 75%
+  --clr-secondary-100: hsl(254, 72%, 35%); //  Blue - 100%
+  --clr-secondary-75: hsl(232, 95%, 74%); //Blue - 75%
+  --clr-accent-100: hsl(48, 100%, 50%); // Yellow - 100%
+  --clr-accent-alt-100: hsl(342, 100%, 67%); // Pink - 100%
+}

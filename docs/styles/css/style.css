@@ -5,6 +5,18 @@ helpers or functions. They have no direct output.
 */
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap");
+/* Custom Properties */
+:root {
+  /* Font Families */
+  --ff-primary: "Sen", sans-serif;
+  --ff-secondary: "Plus Jakarta Sans", sans-serif;
+  --clr-primary-100: hsl(277, 100%, 17%);
+  --clr-primary-75: hsl(254, 43%, 45%);
+  --clr-secondary-100: hsl(254, 72%, 35%);
+  --clr-secondary-75: hsl(232, 95%, 74%);
+  --clr-accent-100: hsl(48, 100%, 50%);
+  --clr-accent-alt-100: hsl(342, 100%, 67%); }
+
 /*
 This file is used to contain all base imports.
 Files inside this folder can contain global styles used in
@@ -79,7 +91,7 @@ select {
 /* Setup */
 html {
   /* Change default typefaces here */
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--ff-secondary);
   font-size: 137.5%;
   -webkit-font-smoothing: antialiased; }
 
@@ -118,7 +130,7 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: "Sen", sans-serif;
+  font-family: var(--ff-primary);
   margin-top: 1.5rem;
   margin-bottom: 0;
   line-height: 1.5rem; }
@@ -182,26 +194,29 @@ to a reusable component.
 
 .btn {
   border-radius: 0.25em;
-  padding: 0.25em 1.5em;
+  padding: 0.55em 1.5em;
   border: none; }
 
 .btn-hero {
-  background-color: yellow;
-  box-shadow: 1px 2px 3px darkorange; }
+  background-color: var(--clr-accent-100);
+  color: #0e0e0e;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem; }
   .btn-hero:hover {
-    background-color: red; }
+    background-color: var(--clr-accent-alt-100); }
 
 .btn-sm {
-  font-size: 0.85rem; }
+  font-size: 0.7rem; }
 
 .btn-md {
-  font-size: 1rem; }
+  font-size: 0.85rem; }
 
 .btn-lg {
-  font-size: 1.15rem; }
+  font-size: 1rem; }
 
 .btn-xl {
-  font-size: 1.3rem; }
+  font-size: 1.15rem; }
 
 /*
 This file is used to contain all layout imports.
@@ -210,9 +225,9 @@ to layouts.
 */
 /* Header Section */
 #header {
-  background: #001099;
-  background: -o-linear-gradient(305deg, #001099 0, #3ad9ff 96%);
-  background: linear-gradient(145deg, #001099 0, #3ad9ff 96%); }
+  background: var(--clr-primary-100);
+  background: -o-linear-gradient(305deg, var(--clr-primary-100) 0, var(--clr-secondary-100) 100%);
+  background: linear-gradient(145deg, var(--clr-primary-100) 0, var(--clr-secondary-100) 100%); }
 
 .header-top {
   max-width: 1100px;
@@ -225,20 +240,15 @@ to layouts.
   gap: 10px;
   padding-top: 0.75em; }
   .header-top__brand {
-    /* Make .header-top__brand & .header-top__nav flexy */
     flex-basis: 20%; }
   .header-top__nav {
     flex-basis: 80%; }
 
-/*  Small devices (landscape phones, 576px and up) */
-/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .header-top {
     flex-flow: row nowrap;
     justify-content: center; } }
 
-/* Large devices (desktops, 992px and up) */
-/* XLarge devices (desktops, 1100px and up) */
 .header-top__nav--list {
   display: flex;
   flex-flow: row wrap;
@@ -254,8 +264,7 @@ to layouts.
   color: #fff;
   text-decoration: none; }
   .header-top__nav--link:hover {
-    color: purple;
-    border-bottom: 2px solid lightcoral; }
+    border-bottom: 2px solid var(--clr-accent-100); }
 
 .hero {
   display: flex;
@@ -266,4 +275,4 @@ to layouts.
   line-height: 3.25rem; }
 
 .hero-copy__subheading {
-  font-size: 1.2rem; }
+  font-size: 1rem; }

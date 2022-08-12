@@ -8,15 +8,13 @@
   }
   &--item {
     font-size: 0.75em;
-    // text-transform: uppercase;
     font-weight: 800;
   }
   &--link {
     color: #fff;
     text-decoration: none;
     &:hover {
-      color: purple;
-      border-bottom: 2px solid lightcoral;
+      border-bottom: 2px solid var(--clr-accent-100);
     }
   }
 }
