@@ -1,0 +1,269 @@
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings,
+helpers or functions. They have no direct output.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap");
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in
+the project.
+*/
+/*
+This file can be used to overwrite any normailze settings.
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none; }
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+/* Setup */
+html {
+  /* Change default typefaces here */
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 137.5%;
+  -webkit-font-smoothing: antialiased; }
+
+/* Copy & Lists */
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0; }
+
+ul,
+ol {
+  padding: 0 0;
+  margin: 0 0; }
+
+ul li,
+ol li {
+  line-height: 1.5rem; }
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Change heading typefaces here */
+  font-family: "Sen", sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem; }
+
+h1 {
+  font-size: 4.242rem;
+  line-height: 4.5rem;
+  margin-top: 3rem; }
+
+h2 {
+  font-size: 2.828rem;
+  line-height: 3rem;
+  margin-top: 3rem; }
+
+h3 {
+  font-size: 1.414rem; }
+
+h4 {
+  font-size: 0.707rem; }
+
+h5 {
+  font-size: 0.4713333333333333rem; }
+
+h6 {
+  font-size: 0.3535rem; }
+
+/* Tables */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse; }
+
+table td,
+table th {
+  padding: 0;
+  line-height: 33px; }
+
+/* Code blocks */
+code {
+  vertical-align: bottom; }
+
+/* Leading paragraph text */
+.lead {
+  font-size: 1.414rem; }
+
+/* Hug the block above you */
+.hug {
+  margin-top: 0; }
+
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating
+to a reusable component.
+*/
+/* Containers */
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  padding: 0.5em; }
+
+.btn {
+  border-radius: 0.25em;
+  padding: 0.25em 1.5em;
+  border: none; }
+
+.btn-hero {
+  background-color: yellow;
+  box-shadow: 1px 2px 3px darkorange; }
+  .btn-hero:hover {
+    background-color: red; }
+
+.btn-sm {
+  font-size: 0.85rem; }
+
+.btn-md {
+  font-size: 1rem; }
+
+.btn-lg {
+  font-size: 1.15rem; }
+
+.btn-xl {
+  font-size: 1.3rem; }
+
+/*
+This file is used to contain all layout imports.
+Files inside this folder should contain all styles relating
+to layouts.
+*/
+/* Header Section */
+#header {
+  background: #001099;
+  background: -o-linear-gradient(305deg, #001099 0, #3ad9ff 96%);
+  background: linear-gradient(145deg, #001099 0, #3ad9ff 96%); }
+
+.header-top {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0.75em; }
+  .header-top__brand {
+    /* Make .header-top__brand & .header-top__nav flexy */
+    flex-basis: 20%; }
+  .header-top__nav {
+    flex-basis: 80%; }
+
+/*  Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-top {
+    flex-flow: row nowrap;
+    justify-content: center; } }
+
+/* Large devices (desktops, 992px and up) */
+/* XLarge devices (desktops, 1100px and up) */
+.header-top__nav--list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  gap: 5px; }
+
+.header-top__nav--item {
+  font-size: 0.75em;
+  font-weight: 800; }
+
+.header-top__nav--link {
+  color: #fff;
+  text-decoration: none; }
+  .header-top__nav--link:hover {
+    color: purple;
+    border-bottom: 2px solid lightcoral; }
+
+.hero {
+  display: flex;
+  color: #fff; }
+
+.hero-copy__heading {
+  font-size: 3rem;
+  line-height: 3.25rem; }
+
+.hero-copy__subheading {
+  font-size: 1.2rem; }

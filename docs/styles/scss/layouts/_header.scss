@@ -1,0 +1,47 @@
+/* Header Section */
+#header {
+  background: #001099;
+  background: -o-linear-gradient(305deg, #001099 0, #3ad9ff 96%);
+  background: linear-gradient(145deg, #001099 0, #3ad9ff 96%);
+}
+
+.header-top {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0.75em;
+
+  &__brand {
+    /* Make .header-top__brand & .header-top__nav flexy */
+
+    flex-basis: 20%;
+  }
+  &__nav {
+    flex-basis: 80%;
+  }
+}
+
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header-top {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* XLarge devices (desktops, 1100px and up) */
+@media (min-width: 1100px) {
+}

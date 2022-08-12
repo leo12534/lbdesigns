@@ -1,0 +1,15 @@
+.hero {
+  display: flex;
+  color: #fff;
+}
+.hero-copy {
+  &__heading {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+  &__subheading {
+    font-size: 1.2rem;
+  }
+}
+.hero-content {
+}
